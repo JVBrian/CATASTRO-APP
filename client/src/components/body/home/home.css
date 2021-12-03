@@ -1,29 +1,73 @@
 .home_page{
     min-height: calc(100vh - 100px);
     padding: 20px;
+    text-align: center;
+    
     
     color: #333;
 }
-.home_page h2{
-    font-size: 2rem;
+.home_img{
+    width: 60%;
+    height: 1000px;
+    border-radius: 20px;
+    padding-right: 50px;
+    float: left;
+    
+
+    
+    
+    
+}
+.home_page h1{
+    font-size: 3rem;
     margin: 10px 0;
     color: teal;
+    margin-bottom: 50px;
+    
+    
+}
+.home_page h2{
+    font-size: 2rem;
+    margin:auto 0;
+    color: teal;
+    
+    
+    
 }
 .home_page p{
-    color: #777;
+    color: rgb(7, 0, 0);
+    line-height: 1.5;
+    font-style: italic;
+    font-size: 20px;
+    text-align: justify;
+    margin:auto 0;
+    padding-left: 15px;
+}
+.home_page li{
+    list-style: disc;
+    color: rgb(7, 0, 0);
     line-height: 1.5;
     margin: 10px 0;
     font-style: italic;
+    font-size: 20px;
+    
+    
+    
+    margin: auto;
+    text-align: justify;
 }
 
 .home_page a{
+    
     color: white;
-    background: crimson;
+    background: linear-gradient(to right, #485563, #29323c);
     padding: 15px 40px;
     display: inline-block;
-    border-radius: 3px;
-    margin: 10px 0;
+    border-radius: 20px;
+    margin: 30px 0;
     letter-spacing: 1.2px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 10px #333;
 }
 .home_page h3{
     color: chocolate;
