@@ -4,7 +4,7 @@ import './home.css'
 function Home() {
     return (
         <div className="home_page">
-            <h1>Bienvenido a su plataforma catastral</h1>
+            <h1>Pago de impuesto  catastral</h1>
             <br></br>
             <img className= "home_img" src="../../leticia.jpg"></img>
             
