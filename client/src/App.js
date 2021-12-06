@@ -6,7 +6,9 @@ import {dispatchLogin, fetchUser, dispatchGetUser} from './redux/actions/authAct
 import Header from './components/header/Header'
 import Body from './components/body/Body'
 import Footer from './components/footer/Footer'
+
 import axios from 'axios';
+
 
 function App() {
   const dispatch = useDispatch()
@@ -42,6 +44,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        
         <Body />
         <br />
         <br />

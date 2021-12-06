@@ -31,7 +31,7 @@ const userCtrl = {
             const passwordHash = await bcrypt.hash(password, 12)
 
             const newUser = {
-                name, email, password: passwordHash
+                name, email, password: passwordHash, cedula
             }
 
             const activation_token = createActivationToken(newUser)
@@ -50,13 +50,13 @@ const userCtrl = {
             const {activation_token} = req.body
             const user = jwt.verify(activation_token, process.env.ACTIVATION_TOKEN_SECRET)
 
-            const {name, email, password} = user
+            const {name, email, password, cedula} = user
 
             const check = await Users.findOne({email})
             if(check) return res.status(400).json({msg:"Este correo ya existe"})
 
             const newUser = new Users({
-                name, email, password
+                name, email, password, cedula
             })
 
             await newUser.save()

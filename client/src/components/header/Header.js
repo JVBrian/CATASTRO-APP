@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+import logo from "../../assets/images/logo.svg";
 
 function Header() {
   const auth = useSelector((state) => state.auth);
@@ -47,21 +48,41 @@ function Header() {
   return (
     <header>
       <div className="logo">
+      
         <h1>
-          <Link to="/">Empresa✮Catastral</Link>
+          <Link to="/">
+          <div id="logo">
+            <img
+              src={logo}
+              className="app-logo"
+              alt="Logotipo"
+              name="lol"
+            />
+             </div>
+            
+             <strong>CATASTRO</strong>App
+            
+           
+          </Link>
         </h1>
       </div>
 
       <ul style={transForm}>
-        
         {isLogged ? (
           userLink()
         ) : (
+          <div>
           <li>
             <Link to="/login">
               <i className="fas fa-user"></i> Iniciar sesión
             </Link>
           </li>
+          <li>
+          <Link to="/register">
+            <i className="fas fa-user"></i> Registrate
+          </Link>
+        </li>
+        </div>
         )}
       </ul>
     </header>

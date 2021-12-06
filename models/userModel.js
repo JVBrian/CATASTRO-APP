@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         default: 0 // 0 = user, 1 = admin
     },
     cedula: {
-        type: Number,
+        type: String,
         required: [true, "Ingresa tu cédula!"]
     },
     avatar: {

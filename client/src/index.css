@@ -33,6 +33,8 @@ button{
   cursor: pointer;
 }
 
+
+
 /* ----------------- Header ------------------- */
 @import url("./components/header/header.css");
 
@@ -44,5 +46,8 @@ button{
 
 /* ----------------- Footer ------------------- */
 @import url("./components/footer/footer.css");
+
+/* ----------------- Slider ------------------- */
+@import url("./components/slider/slider.css");
 
 

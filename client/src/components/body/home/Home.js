@@ -1,9 +1,14 @@
 import React from 'react'
 import './home.css'
+import Slider from '../../slider/Slider';
 
 function Home() {
-    return (
+    return (<div>
+        <Slider />
         <div className="home_page">
+            
+            
+        
             <h1>Pago de impuesto  catastral</h1>
             <br></br>
             <img className= "home_img" src="../../leticia.jpg"></img>
@@ -73,6 +78,7 @@ function Home() {
             
             <a href="https://www.youtube.com/watch?v=8SbUC-UaAxE" target="_blank" 
             rel="noopener noreferrer">Enlaces de interés</a>
+        </div>
         </div>
     )
 }
