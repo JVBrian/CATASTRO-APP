@@ -10,10 +10,13 @@ import ResetPass from '../body/auth/ResetPassword'
 
 import Profile from '../body/profile/Profile'
 import EditUser from '../body/profile/EditUser'
+import Convenios from '../body/predios/Convenios'
+import CrearPredios from './predios/CrearPredios'
 
 import Home from '../body/home/Home'
 
 import {useSelector} from 'react-redux'
+import CrearPredio from './profile/CrearPredio'
 
 function Body() {
     const auth = useSelector(state => state.auth)
@@ -33,7 +36,8 @@ function Body() {
 
                 <Route path="/profile" component={isLogged ? Profile : NotFound} exact />
                 <Route path="/edit_user/:id" component={isAdmin ? EditUser : NotFound} exact />
-
+                <Route path="/user/convenios" component={isLogged ? Convenios : NotFound} exact />
+                <Route path="/user/crear-predios" component={isLogged ? CrearPredios : NotFound} exact />
             </Switch>
         </section>
     )

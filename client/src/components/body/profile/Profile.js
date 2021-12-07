@@ -11,7 +11,7 @@ import {
   fetchAllUsers,
   dispatchGetAllUsers,
 } from "../../../redux/actions/usersAction";
-import EditPredios from './EditPredios';
+import CrearPredio from './CrearPredio';
 
 
 const initialState = {
@@ -251,9 +251,9 @@ function Profile() {
 
         <div className="col-right">
           <div className="profile-role">
-            <h2>{isAdmin ? " Gestión de usuarios" : "Gestión de predios"}</h2>
+            {/*<h2>{isAdmin ? " Gestión de usuarios" : "Gestión de predios"}</h2>*/}
             {user.role === 2 && (
-              <EditPredios />
+              <CrearPredio />
             )}
           </div>
           <div style={{ overflowX: "auto" }}>
