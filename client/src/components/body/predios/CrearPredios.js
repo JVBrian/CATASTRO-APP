@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import EditPredios from '../profile/EditPredios';
 
-class CrearPredio extends Component{
+class CrearPredios extends Component{
     render(){
         return(
             <div>
@@ -15,4 +15,4 @@ class CrearPredio extends Component{
     }
 }
 
-export default CrearPredio;
+export default CrearPredios;

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
+import React, { useState, useEffect} from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { isLength, isMatch } from "../../utils/validation/Validation";
 import {
   showSuccessMsg,
@@ -11,19 +11,17 @@ import {
   fetchAllUsers,
   dispatchGetAllUsers,
 } from "../../../redux/actions/usersAction";
-import ProfileButtonsI from "./ProfileButtonsI";
-import ProfileButtonsE from "./ProfileButtonsE";
-import ProfileButtonsA from "./ProfileButtonsA";
 
-const initialState = {
-  name: "",
-  password: "",
-  cf_password: "",
-  err: "",
-  success: "",
-};
 
-function Profile() {
+function ProfileUser() {
+  const initialState = {
+    name: "",
+    password: "",
+    cf_password: "",
+    err: "",
+    success: "",
+  };
+
   const auth = useSelector((state) => state.auth);
   const token = useSelector((state) => state.token);
 
@@ -172,58 +170,96 @@ function Profile() {
   };
 
   return (
-    <>
-      <div>
-        {err && showErrMsg(err)}
-        {success && showSuccessMsg(success)}
-        {loading && <h3>Cargando...</h3>}
-      </div>
-      <div className="profile_page">
-        <div className="col-form">
-          <h2>{isAdmin ? "Perfil Administrador " : type}</h2>
-
-          <div className="avatar">
-            <img src={avatar ? avatar : user.avatar} alt="" />
-          </div>
-          <br />
-
-          <div className="form-group">
-            <label htmlFor="name">Nombre</label>
+    <div className="profile_page">
+      <div className="col-left">
+        <div>
+          {err && showErrMsg(err)}
+          {success && showSuccessMsg(success)}
+          {loading && <h3>Cargando...</h3>}
+        </div>
+        <div className="avatar">
+          <img src={avatar ? avatar : user.avatar} alt="" />
+          <span>
+            <i className="fas fa-camera"></i>
+            <p>Cambiar</p>
             <input
-              type="text"
-              name="name"
-              id="name"
-              defaultValue={user.name}
-              placeholder="Escribe tu nombre"
-              onChange={handleChange}
-              disabled
+              type="file"
+              name="file"
+              id="file_up"
+              onChange={changeAvatar}
             />
-          </div>
+          </span>
+        </div>
+        <br />
 
-          <div className="form-group">
-            <label htmlFor="email">Correo electrónico</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              defaultValue={user.email}
-              placeholder="Escribe tu correo"
-              disabled
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            defaultValue={user.name}
+            placeholder="Escribe tu nombre"
+            onChange={handleChange}
+          />
         </div>
 
-        <div className="col-right">
-          <div className="profile-role">
-            {/*<h2>{isAdmin ? " Gestión de usuarios" : "Gestión de predios"}</h2>*/}
-            {user.role === 2 && <ProfileButtonsI />}
-            {user.role === 0 && <ProfileButtonsE />}
-            {user.role === 1 && <ProfileButtonsA />}
-          </div>
+        <div className="form-group">
+          <label htmlFor="email">Correo electrónico</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            defaultValue={user.email}
+            placeholder="Escribe tu correo"
+            disabled
+          />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="password">Nueva contraseña</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Escribe tu contraseña"
+            value={password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="cf_password">Confirmar tu nueva contraseña</label>
+          <input
+            type="password"
+            name="cf_password"
+            id="cf_password"
+            placeholder="Confirma tu contraseña"
+            value={cf_password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <button
+          className="button-update"
+          disabled={loading}
+          onClick={handleUpdate}
+        ><strong>
+          Actualizar
+          </strong>
+        </button>
+        <Link className="button-link" to="/profile">
+        <button
+          className="button-update"
+          
+        ><strong>
+          Volver
+          </strong>
+        </button>
+        </Link>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Profile;
+export default ProfileUser;

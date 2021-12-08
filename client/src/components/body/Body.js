@@ -12,11 +12,18 @@ import Profile from '../body/profile/Profile'
 import EditUser from '../body/profile/EditUser'
 import Convenios from '../body/predios/Convenios'
 import CrearPredios from './predios/CrearPredios'
+import ConsultarPredio from './predios/ConsultarPredio'
+import ProfileUser from './profile/ProfileUser'
+import AdminUser from './profile/AdminUser'
 
 import Home from '../body/home/Home'
 
 import {useSelector} from 'react-redux'
-import CrearPredio from './profile/CrearPredio'
+import PagoPredios from './predios/PagoPredios'
+import NewUserI from './profile/NewUserI'
+
+
+
 
 function Body() {
     const auth = useSelector(state => state.auth)
@@ -38,6 +45,11 @@ function Body() {
                 <Route path="/edit_user/:id" component={isAdmin ? EditUser : NotFound} exact />
                 <Route path="/user/convenios" component={isLogged ? Convenios : NotFound} exact />
                 <Route path="/user/crear-predios" component={isLogged ? CrearPredios : NotFound} exact />
+                <Route path="/user/consultar-predios" component={isLogged ? ConsultarPredio : NotFound} exact />
+                <Route path="/user/profile-information" component={isLogged ? ProfileUser : NotFound} exact />
+                <Route path="/user/gestion" component={isAdmin ? AdminUser : NotFound} exact />
+                <Route path="/user/pago-predios" component={isLogged ? PagoPredios : NotFound} exact />
+                <Route path="/new-user" component={isAdmin ? NewUserI : NotFound} exact />
             </Switch>
         </section>
     )
