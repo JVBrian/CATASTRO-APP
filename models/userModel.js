@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 
 const userSchema = new mongoose.Schema({
@@ -6,6 +6,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Ingresa tu nombre!"],
         trim: true
+    },
+    lastname: {
+        type: String,
+        required: [true, "Ingresa tus apellidos!"]
     },
     email: {
         type: String,
@@ -17,13 +21,31 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Ingresa tu contraseña!"]
     },
+    
     role: {
         type: Number,
-        default: 0 // 0 = user, 1 = admin
+        required: [true, "Acepta los terminos"]
+        
     },
     cedula: {
         type: String,
         required: [true, "Ingresa tu cédula!"]
+    },
+    telefono: {
+        type: String,
+        required: [true, "Ingresa tu telefono!"]
+    },
+    barrio: {
+        type: String,
+        required: [true, "Ingresa tu barrio!"]
+    },
+    direccion: {
+        type: String,
+        required: [true, "Ingresa tu dirección!"]
+    },
+    genero: {
+        type: String,
+        required: [true, "Ingresa tu sexo!"]
     },
     avatar: {
         type: String,

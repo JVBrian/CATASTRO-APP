@@ -327,7 +327,7 @@ input[type="text"],
 textarea {
   width: 100%;
   min-height: 30px;
-  padding: 3px;
+  padding: 1px;
   margin-bottom: 5px;
   transition: 300ms all;
 }
@@ -364,4 +364,24 @@ textarea:focus {
 }
 .button-link {
   color: #f2f2f2;
+}
+/*----------- formulario interno ---------- */
+.newUser {
+  width: 100%;
+  min-height: 30px;
+  padding: 1px;
+  margin-bottom: 5px;
+  transition: 300ms all;
+  text-align: center;
+  align-items: center;
+}
+input[type="radio"] {
+  width: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  nav-left: auto;
+}
+.radio-user {
+  margin-left: -60px;
+  margin-top: -20px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 import {
@@ -22,12 +23,32 @@ const initialState = {
   err: "",
   success: "",
   cedula: "",
+  barrio: "",
+  direccion: "",
+  telefono: "",
+  genero: "",
+  lastname: "",
+  role: "",
 };
 
 function Register() {
   const [user, setUser] = useState(initialState);
 
-  const { name, email, password, cf_password, err, success, cedula } = user;
+  const {
+    name,
+    email,
+    password,
+    cf_password,
+    err,
+    success,
+    cedula,
+    direccion,
+    barrio,
+    telefono,
+    genero,
+    lastname,
+    role,
+  } = user;
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -76,6 +97,12 @@ function Register() {
         email,
         password,
         cedula,
+        barrio,
+        direccion,
+        telefono,
+        genero,
+        lastname,
+        role,
       });
 
       setUser({ ...user, err: "", success: res.data.msg });
@@ -96,10 +123,11 @@ function Register() {
         {success && showSuccessMsg(success)}
 
         <form onSubmit={handleSubmit}>
-          <br></br>
-          <br></br>
-          <div>
-            <label htmlFor="name">Nombre</label>
+          <br />
+          <br />
+          <div className="newUser">
+            <label htmlFor="name">Nombre </label>
+            <br />
             <input
               type="text"
               placeholder="Ingresa tu nombre"
@@ -109,8 +137,23 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
+          <br />
+          <div className="newUser">
+            <label htmlFor="lastname">Apellidos </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Ingresa tus apellidos"
+              id="lastname"
+              value={lastname}
+              name="lastname"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <br />
           <div>
-            <label htmlFor="name">Cedula</label>
+            <label htmlFor="cedula">Cedula </label>
+            <br />
             <input
               type="text"
               placeholder="Ingresa tu cedula"
@@ -120,9 +163,82 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
-
+          <br />
           <div>
-            <label htmlFor="email">Correo electrónico</label>
+            <label htmlFor="telefono">Telefono </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Ingresa tu telefono"
+              id="telefono"
+              value={telefono}
+              name="telefono"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <br />
+          <label htmlFor="sexo">Genero </label>
+          <div className="radio-user">
+            <br />
+            <input
+              id="genero"
+              type="radio"
+              name="genero"
+              value="hombre"
+              onChange={handleChangeInput}
+            />
+            Hombre
+            <input
+              id="genero"
+              type="radio"
+              name="genero"
+              value="mujer"
+              onChange={handleChangeInput}
+            />{" "}
+            Mujer
+            <input
+              id="genero"
+              type="radio"
+              name="genero"
+              value="otro"
+              onChange={handleChangeInput}
+            />{" "}
+            Otro
+          </div>
+          {/*<br />
+          <div>
+            <input type="date" name="date" value="" min="1997-01-01" max="2030-12-31" />
+          </div>*/}
+          <br />
+          <div>
+            <label htmlFor="direccion">Dirección </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Ingresa tu dirección"
+              id="direccion"
+              value={direccion}
+              name="direccion"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <br />
+          <div>
+            <label htmlFor="barrio">Barrio </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Ingresa tu Barrio o municipio"
+              id="barrio"
+              value={barrio}
+              name="barrio"
+              onChange={handleChangeInput}
+            />
+          </div>
+          <br />
+          <div>
+            <label htmlFor="email">Correo electrónico </label>
+            <br />
             <input
               type="text"
               placeholder="Ingresa tu correo"
@@ -132,9 +248,9 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
-
+          <br />
           <div>
-            <label htmlFor="password">Contraseña</label>
+            <label htmlFor="password">Contraseña </label>
             <input
               type="password"
               placeholder="Ingresa tu contraseña"
@@ -144,9 +260,9 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
-
+          <br />
           <div>
-            <label htmlFor="cf_password">Confirmar contraseña</label>
+            <label htmlFor="cf_password">Confirmar contraseña </label>
             <input
               type="password"
               placeholder="Confirma tu contraseña"
@@ -156,7 +272,16 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
-
+          <input
+            id="role"
+            type="checkbox"
+            name="role"
+            value={0}
+            onChange={handleChangeInput}
+          />
+          <br />
+          <p>Aceptar términos y condiciones de la plataforma.</p>
+          <br />
           <div className="row">
             <button type="submit">Registrar</button>
           </div>

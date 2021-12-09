@@ -1,112 +1,124 @@
-.login_page{
-    max-width: 500px;
-    margin: auto;
-    color: #444;
-    padding: 10px 30px 30px;
-    border: 0px solid #111;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 5px 3px 10px #111;
-    text-align: center;
-    
-    
+.login_page {
+  max-width: 500px;
+  margin: auto;
+  color: #444;
+  padding: 10px 30px 30px;
+  border: 0px solid #111;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 3px 10px #111;
+  text-align: center;
 }
-.login_page h2{
-    text-transform: uppercase;
-    margin-top: 50px;
-    margin: auto;
-    letter-spacing: 1.5px;
-    font-size: 40px;
-    
+.login_page h2 {
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin: auto;
+  letter-spacing: 1.5px;
+  font-size: 40px;
 }
 
-.login_page input{
-    width: 100%;
-    height: 45px;
-    margin: 10px 0;
-    outline: none;
-    padding: 0 10px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    
+.login_page input {
+  width: 100%;
+  height: 45px;
+  margin: 10px 0;
+  outline: none;
+  padding: 0 10px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
 }
-.login_page .row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
-    align-items: flex-start;
+.login_page .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  align-items: flex-start;
 }
-.login_page .row a{
-    color: crimson;
+.login_page .row a {
+  color: crimson;
 }
-.login_page .row button{
-    width: 150px;
-    padding: 10px 0;
-    color: white;
-    background: linear-gradient(to right, #e44d26, #f16529); 
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 6px #111;
+.login_page .row button {
+  width: 150px;
+  padding: 10px 0;
+  color: white;
+  background: linear-gradient(to right, #e44d26, #f16529);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 6px #111;
 }
-.login_page p{
-    margin: 10px 0;
+.login_page p {
+  margin: 10px 0;
 }
-.login_page a{
-    color: #111;
-    font-weight: 600;
+.login_page a {
+  color: #111;
+  font-weight: 600;
 }
 
 /* ------------- Forgot Password --------------- */
-.fg_pass h2{
-    color: #555;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2rem;
-    margin: 50px 0;
-    letter-spacing: 1.3px;
+.fg_pass h2 {
+  color: #555;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0;
+  letter-spacing: 1.3px;
 }
-.fg_pass .row{
-    max-width: 500px;
-    margin: auto;
-    padding: 0 10px;
+.fg_pass .row {
+  max-width: 500px;
+  margin: auto;
+  padding: 0 10px;
 }
-.fg_pass .row input{
-    width: 100%;
-    height: 45px;
-    border: 1px solid #ccc;
-    outline: none;
-    padding: 0 15px;
-    border-radius: 3px;
-    margin: 5px 0;
+.fg_pass .row input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 3px;
+  margin: 5px 0;
 }
-.fg_pass .row button{
-    background: #333;
-    color: white;
-    padding: 10px 30px;
-    text-transform: uppercase;
-            
-    letter-spacing: 1.3px;
-    border-radius: 3px;
-    margin-top: 15px;
+.fg_pass .row button {
+  background: #333;
+  color: white;
+  padding: 10px 30px;
+  text-transform: uppercase;
+
+  letter-spacing: 1.3px;
+  border-radius: 3px;
+  margin-top: 15px;
 }
 /* ---------- Facebook / Google ---------------- */
-.login_page .hr{
-    margin: 15px 0;
-    color: crimson;
+.login_page .hr {
+  margin: 15px 0;
+  color: crimson;
 }
 
-.login_page .social button{
-    width: 50%;
-    margin: 10px 0;
-    height: 50px;
-    font-size: 14px;
-    font-weight: 200;
-    text-transform: capitalize;
-    letter-spacing: 1.3px;
-    box-shadow: 0 2px 4px #777;
-    border-radius: 5px;
+.login_page .social button {
+  width: 50%;
+  margin: 10px 0;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: capitalize;
+  letter-spacing: 1.3px;
+  box-shadow: 0 2px 4px #777;
+  border-radius: 5px;
+}
+input[type="radio"] {
+  width: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  nav-left: auto;
+}
+input[type="checkbox"] {
+  width: 20px;
+  float: left;
+  margin-top: 17px;
+  margin-left: 20px;
+}
+.radio-user {
+  margin-left: -60px;
+  margin-top: -20px;
 }
