@@ -21,6 +21,7 @@ import Home from '../body/home/Home'
 import {useSelector} from 'react-redux'
 import PagoPredios from './predios/PagoPredios'
 import NewUserI from './profile/NewUserI'
+import AsignarPredio from './profile/AsignarPredio'
 
 
 
@@ -40,11 +41,12 @@ function Body() {
                 <Route path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} exact />
 
                 <Route path="/user/activate/:activation_token" component={ActivationEmail} exact />
-
+                <Route path="/asignar_predio/:id" component={isLogged ? AsignarPredio : NotFound} exact />
                 <Route path="/profile" component={isLogged ? Profile : NotFound} exact />
                 <Route path="/edit_user/:id" component={isAdmin ? EditUser : NotFound} exact />
                 <Route path="/user/convenios" component={isLogged ? Convenios : NotFound} exact />
                 <Route path="/user/crear-predios" component={isLogged ? CrearPredios : NotFound} exact />
+                <Route path="/user/predio-user" component={isLogged ? CrearPredios : NotFound} exact />
                 <Route path="/user/consultar-predios" component={isLogged ? ConsultarPredio : NotFound} exact />
                 <Route path="/user/profile-information" component={isLogged ? ProfileUser : NotFound} exact />
                 <Route path="/user/gestion" component={isAdmin ? AdminUser : NotFound} exact />

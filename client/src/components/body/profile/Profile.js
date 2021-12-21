@@ -186,6 +186,17 @@ function Profile() {
             <img src={avatar ? avatar : user.avatar} alt="" />
           </div>
           <br />
+          <div className="form-group">
+            <label htmlFor="cedula">Cédula</label>
+            <input
+              type="text"
+              name="cedula"
+              id="cedula"
+              defaultValue={user.cedula}
+              onChange={handleChange}
+              disabled
+            />
+          </div>
 
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
@@ -194,12 +205,21 @@ function Profile() {
               name="name"
               id="name"
               defaultValue={user.name}
-              placeholder="Escribe tu nombre"
               onChange={handleChange}
               disabled
             />
           </div>
 
+          <div className="form-group">
+            <label htmlFor="lastname">Apellidos</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              defaultValue={user.lastname}
+              disabled
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="email">Correo electrónico</label>
             <input
@@ -207,7 +227,50 @@ function Profile() {
               name="email"
               id="email"
               defaultValue={user.email}
-              placeholder="Escribe tu correo"
+              disabled
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="telefono">Telefono</label>
+            <input
+              type="text"
+              name="telefono"
+              id="telefono"
+              defaultValue={user.telefono}
+              onChange={handleChange}
+              disabled
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="genero">Sexo</label>
+            <input
+              type="text"
+              name="genero"
+              id="genero"
+              defaultValue={user.genero}
+              onChange={handleChange}
+              disabled
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="barrio">Barrio</label>
+            <input
+              type="text"
+              name="barrio"
+              id="barrio"
+              defaultValue={user.barrio}
+              onChange={handleChange}
+              disabled
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="direccion">Dirección</label>
+            <input
+              type="text"
+              name="direccion"
+              id="direccion"
+              defaultValue={user.direccion}
+              onChange={handleChange}
               disabled
             />
           </div>

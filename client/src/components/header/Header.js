@@ -60,7 +60,7 @@ function Header() {
             />
              </div>
             
-             <strong>CATASTRO</strong>App
+             <strong>CATASTRO</strong>
             
            
           </Link>
@@ -79,7 +79,7 @@ function Header() {
           </li>
           <li>
           <Link to="/register">
-            <i className="fas fa-user"></i> Registrate
+            <i className="fas fa-user-plus"></i> Registrate
           </Link>
         </li>
         </div>

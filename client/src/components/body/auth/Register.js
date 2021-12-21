@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 import axios from "axios";
 import {
@@ -125,7 +124,7 @@ function Register() {
         <form onSubmit={handleSubmit}>
           <br />
           <br />
-          <div className="newUser">
+          <div className="newUser" >
             <label htmlFor="name">Nombre </label>
             <br />
             <input
@@ -137,7 +136,7 @@ function Register() {
               onChange={handleChangeInput}
             />
           </div>
-          <br />
+         <br/>
           <div className="newUser">
             <label htmlFor="lastname">Apellidos </label>
             <br />

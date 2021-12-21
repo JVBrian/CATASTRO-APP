@@ -43,6 +43,7 @@ function EditUser() {
                 setSuccess(res.data.msg)
                 setNum(0)
             }
+            
         } catch (err) {
             err.response.data.msg && setErr(err.response.data.msg)
         }
@@ -65,7 +66,7 @@ function EditUser() {
 
             <div className="col-left">
                 <h2>Editar usuario</h2>
-
+                
                 <div className="form-group">
                     <label htmlFor="name">Nombre</label>
                     <input type="text" name="name" defaultValue={editUser.name} disabled/>

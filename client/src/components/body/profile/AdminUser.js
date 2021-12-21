@@ -174,8 +174,14 @@ function AdminUser() {
           {user.role === 1 && (
             <tr>
               <th>ID</th>
+              <th>Cédula</th>
               <th>Nombre</th>
+              <th>Apellido</th>
               <th>Correo</th>
+              <th>Telefono</th>
+              <th>Sexo</th>
+              <th>Barrio</th>
+              <th>Dirección</th>
               <th>Admin</th>
               <th>Gestión</th>
             </tr>
@@ -185,8 +191,14 @@ function AdminUser() {
           {users.map((user) => (
             <tr key={user._id}>
               <td>{user._id}</td>
+              <td>{user.cedula}</td>
               <td>{user.name}</td>
+              <td>{user.lastname}</td>
               <td>{user.email}</td>
+              <td>{user.telefono}</td>
+              <td>{user.genero}</td>
+              <td>{user.barrio}</td>
+              <td>{user.direccion}</td>
               <td>
                 {user.role === 1 ? (
                   <i className="fas fa-check" title="Admin"></i>

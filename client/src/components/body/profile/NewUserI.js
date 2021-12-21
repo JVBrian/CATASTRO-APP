@@ -278,6 +278,9 @@ function NewUserI() {
             value={2}
             onChange={handleChangeInput}
           />
+          <br />
+          <p>Aceptar términos y condiciones de la plataforma.</p>
+          <br />
 
           <br />
           <div className="row">

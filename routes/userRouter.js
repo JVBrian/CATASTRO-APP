@@ -2,8 +2,12 @@ const router = require('express').Router()
 const userCtrl = require('../controllers/userCtrl')
 const auth = require('../middleware/auth')
 const authAdmin = require('../middleware/authAdmin')
+const predioCtrl = require('../controllers/predioCtrl')
+
 
 router.post('/register', userCtrl.register)
+
+router.post('/asignar_predio/:id', predioCtrl.registerPredio)
 
 router.post('/activation', userCtrl.activateEmail)
 
@@ -17,7 +21,11 @@ router.post('/reset', auth, userCtrl.resetPassword)
 
 router.get('/infor', auth, userCtrl.getUserInfor)
 
-router.get('/all_infor', auth, authAdmin, userCtrl.getUsersAllInfor)
+router.get('/all_infor', auth,  userCtrl.getUsersAllInfor)
+
+router.get('/infor-predio', auth, predioCtrl.getPredioInfor)
+
+router.get('/all_infor-predio', auth,  predioCtrl.getPrediosAllInfor)
 
 router.get('/logout', userCtrl.logout)
 

@@ -7,7 +7,7 @@ class ProfileButtonsE extends Component {
       <div>
         <Link className="button-link" to="/user/profile-information">
           <button className="button-predio">
-            <strong>Editar mi información </strong>
+            <strong>Mi información </strong>
           </button>
         </Link>
 

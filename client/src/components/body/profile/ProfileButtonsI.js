@@ -7,7 +7,7 @@ class ProfileButtonsI extends Component {
       <div>
         <Link className="button-link" to="/user/profile-information">
           <button className="button-predio">
-            <strong>Editar mi información </strong>
+            <strong> Mi información </strong>
           </button>
         </Link>
         <Link className="button-link" to="/user/crear-predios">
@@ -18,7 +18,7 @@ class ProfileButtonsI extends Component {
 
         <Link className="button-link" to="/user/consultar-predios">
           <button className="button-predio">
-            <strong>Consultar predio</strong>
+            <strong>Ver predios</strong>
           </button>
         </Link>
 
@@ -27,6 +27,7 @@ class ProfileButtonsI extends Component {
             <strong> Convenios de pago</strong>
           </button>
         </Link>
+       
       </div>
     );
   }

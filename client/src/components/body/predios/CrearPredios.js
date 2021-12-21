@@ -6,7 +6,7 @@ class CrearPredios extends Component{
         return(
             <div>
         <div id="slider" class="slider-small">
-          <h1>Cree un predio</h1>
+          <h1>Seleccionar propietario</h1>
         </div>
         <EditPredios />
       </div>
